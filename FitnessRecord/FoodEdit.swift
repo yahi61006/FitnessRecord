@@ -129,18 +129,15 @@ struct Nutrition: View {
                 .foregroundColor(Color.purple)
             if nutritionIndex == 0 {
                 TextField(nutritionName, value: $protein ,formatter: DoubleFormatter())
-                    .keyboardType(.numberPad)
                     .padding()
             }
             else if nutritionIndex == 1{
                 TextField(nutritionName, value: $fat ,formatter: DoubleFormatter())
-                    .keyboardType(.numberPad)
                     .padding()
             }
             else{
                 TextField(nutritionName, value: $carbohydrate ,formatter: DoubleFormatter())
-                    .keyboardType(.numberPad)
-                    .padding()
+                     .padding()
             }
             Text("克")
         }
