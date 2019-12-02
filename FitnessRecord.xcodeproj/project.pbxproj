@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF71C7762392539E00E27D91 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71C7752392539E00E27D91 /* FoodRow.swift */; };
+		BF71C7782392624200E27D91 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71C7772392624200E27D91 /* FoodList.swift */; };
+		BFAE1937239280B8009FA445 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE1936239280B8009FA445 /* PieChart.swift */; };
+		BFAE193923928101009FA445 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE193823928101009FA445 /* PieChartView.swift */; };
+		BFAE193B2392819D009FA445 /* FoodAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE193A2392819D009FA445 /* FoodAnalysis.swift */; };
+		BFAE193F2392F9E3009FA445 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE193E2392F9E3009FA445 /* BarChart.swift */; };
+		BFAE19412392FB0E009FA445 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE19402392FB0E009FA445 /* BarChartView.swift */; };
+		BFAE19432393036D009FA445 /* FoodBarAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE19422393036D009FA445 /* FoodBarAnalysis.swift */; };
+		BFC9EE3E23920B0D0076AE2C /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9EE3D23920B0D0076AE2C /* Food.swift */; };
+		BFC9EE4023920D360076AE2C /* FoodEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9EE3F23920D360076AE2C /* FoodEdit.swift */; };
+		BFC9EE4423920E1D0076AE2C /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9EE4323920E1D0076AE2C /* FoodData.swift */; };
 		BFE55411238E556F0004BA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55410238E556F0004BA58 /* AppDelegate.swift */; };
 		BFE55413238E556F0004BA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55412238E556F0004BA58 /* SceneDelegate.swift */; };
 		BFE55415238E556F0004BA58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55414238E556F0004BA58 /* ContentView.swift */; };
@@ -16,6 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF71C7752392539E00E27D91 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
+		BF71C7772392624200E27D91 /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
+		BFAE1936239280B8009FA445 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		BFAE193823928101009FA445 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		BFAE193A2392819D009FA445 /* FoodAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAnalysis.swift; sourceTree = "<group>"; };
+		BFAE193E2392F9E3009FA445 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		BFAE19402392FB0E009FA445 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		BFAE19422393036D009FA445 /* FoodBarAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBarAnalysis.swift; sourceTree = "<group>"; };
+		BFC9EE3D23920B0D0076AE2C /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		BFC9EE3F23920D360076AE2C /* FoodEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodEdit.swift; sourceTree = "<group>"; };
+		BFC9EE4323920E1D0076AE2C /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		BFE5540D238E556F0004BA58 /* FitnessRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE55410238E556F0004BA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE55412238E556F0004BA58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +81,17 @@
 				BFE55410238E556F0004BA58 /* AppDelegate.swift */,
 				BFE55412238E556F0004BA58 /* SceneDelegate.swift */,
 				BFE55414238E556F0004BA58 /* ContentView.swift */,
+				BFAE19422393036D009FA445 /* FoodBarAnalysis.swift */,
+				BFAE193A2392819D009FA445 /* FoodAnalysis.swift */,
+				BFAE19402392FB0E009FA445 /* BarChartView.swift */,
+				BFAE193E2392F9E3009FA445 /* BarChart.swift */,
+				BFAE193823928101009FA445 /* PieChartView.swift */,
+				BFAE1936239280B8009FA445 /* PieChart.swift */,
+				BF71C7772392624200E27D91 /* FoodList.swift */,
+				BF71C7752392539E00E27D91 /* FoodRow.swift */,
+				BFC9EE3F23920D360076AE2C /* FoodEdit.swift */,
+				BFC9EE4323920E1D0076AE2C /* FoodData.swift */,
+				BFC9EE3D23920B0D0076AE2C /* Food.swift */,
 				BFE55416238E55700004BA58 /* Assets.xcassets */,
 				BFE5541B238E55700004BA58 /* LaunchScreen.storyboard */,
 				BFE5541E238E55700004BA58 /* Info.plist */,
@@ -146,7 +179,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAE1937239280B8009FA445 /* PieChart.swift in Sources */,
 				BFE55411238E556F0004BA58 /* AppDelegate.swift in Sources */,
+				BFAE19412392FB0E009FA445 /* BarChartView.swift in Sources */,
+				BFC9EE4023920D360076AE2C /* FoodEdit.swift in Sources */,
+				BFAE193B2392819D009FA445 /* FoodAnalysis.swift in Sources */,
+				BFAE19432393036D009FA445 /* FoodBarAnalysis.swift in Sources */,
+				BFAE193F2392F9E3009FA445 /* BarChart.swift in Sources */,
+				BFC9EE3E23920B0D0076AE2C /* Food.swift in Sources */,
+				BFC9EE4423920E1D0076AE2C /* FoodData.swift in Sources */,
+				BF71C7762392539E00E27D91 /* FoodRow.swift in Sources */,
+				BFAE193923928101009FA445 /* PieChartView.swift in Sources */,
+				BF71C7782392624200E27D91 /* FoodList.swift in Sources */,
 				BFE55413238E556F0004BA58 /* SceneDelegate.swift in Sources */,
 				BFE55415238E556F0004BA58 /* ContentView.swift in Sources */,
 			);
