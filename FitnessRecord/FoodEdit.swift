@@ -31,82 +31,85 @@ struct FoodEdit: View {
     @State private var showPieChart = false
     
     var body: some View {
-        VStack{
-            Form{
-                TextField("餐點名稱", text: $name)
-                    //.frame(width: 300, height: 50)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.green, lineWidth: 5))
-                    .padding()
-                
-                VStack {
-                    DatePicker("吃飯日期", selection: $eatDate, displayedComponents: .date)
-                    Text(dateFormatter.string(from: eatDate))
-                }
-                
-                Picker("哪一餐", selection: $eatTimeIndex) {
-                    ForEach(0..<eatTime.count){ (index) in
-                        Text(self.eatTime[index])
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
-                
-                Toggle("我的最愛", isOn: $favorite)
-                
-                
-                Nutrition(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate, nutritionName: nutritions[0], nutritionIndex: 0)
-                Nutrition(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate, nutritionName: nutritions[1], nutritionIndex: 1)
-                Nutrition(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate, nutritionName: nutritions[2], nutritionIndex: 2)
-                
-                HStack(spacing: 50){
-                    Text("顯示各成分熱量")
+        KeyboardHost {
+            VStack{
+                Form{
+                    TextField("餐點名稱", text: $name)
+                        //.frame(width: 300, height: 50)
                         .padding()
-                        .foregroundColor(Color.white)
-                        .background(Color.green)
-                        .cornerRadius(30)
-                        .onTapGesture {
-                            self.showBarChart = true
-                    }.sheet(isPresented: $showBarChart) {
-                        FoodBarAnalysis(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate)
+                        .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.green, lineWidth: 5))
+                        .padding()
+                    
+                    VStack {
+                        DatePicker("吃飯日期", selection: $eatDate, displayedComponents: .date)
+                        Text(dateFormatter.string(from: eatDate))
                     }
                     
-                    Text("顯示營養比例")
-                        .padding()
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
-                        .cornerRadius(30)
-                        .onTapGesture {
-                            self.showPieChart = true
-                    }.sheet(isPresented: $showPieChart) {
-                        FoodAnalysis(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate)
+                    Picker("哪一餐", selection: $eatTimeIndex) {
+                        ForEach(0..<eatTime.count){ (index) in
+                            Text(self.eatTime[index])
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                    
+                    Toggle("我的最愛", isOn: $favorite)
+                    
+                    VStack{
+                        Nutrition(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate, nutritionName: nutritions[0], nutritionIndex: 0)
+                        Nutrition(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate, nutritionName: nutritions[1], nutritionIndex: 1)
+                        Nutrition(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate, nutritionName: nutritions[2], nutritionIndex: 2)
                     }
+                    
+                    HStack(spacing: 50){
+                        Text("顯示各成分熱量")
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .background(Color.green)
+                            .cornerRadius(30)
+                            .onTapGesture {
+                                self.showBarChart = true
+                        }.sheet(isPresented: $showBarChart) {
+                            FoodBarAnalysis(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate)
+                        }
+                        
+                        Text("顯示營養比例")
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .background(Color.blue)
+                            .cornerRadius(30)
+                            .onTapGesture {
+                                self.showPieChart = true
+                        }.sheet(isPresented: $showPieChart) {
+                            FoodAnalysis(protein: self.$protein, fat: self.$fat, carbohydrate: self.$carbohydrate)
+                        }
+                    }
+                    .padding()
                 }
-                .padding()
             }
-        }
-        .navigationBarTitle(editFood == nil ? "新增餐點" : "編輯餐點")
-        .navigationBarItems(trailing: Button("Save"){
-            let meal = Food(name: self.name, eatDate: self.eatDate, eatTimeIndex: self.eatTimeIndex, protein: self.protein, fat: self.fat, carbohydrate: self.carbohydrate, favorite: self.favorite)
-            if let editFood = self.editFood {
-                let index = self.mealsData.meals.firstIndex {
-                    $0.id == editFood.id
-                    }!
-                self.mealsData.meals[index] = meal
-            }
-            else{
-                self.mealsData.meals.insert(meal, at: 0)
-            }
-            self.presentationMode.wrappedValue.dismiss()
-        })
-            .onAppear{
-                if let editFood = self.editFood{
-                    self.name = editFood.name
-                    self.protein = editFood.protein
-                    self.fat = editFood.fat
-                    self.carbohydrate = editFood.carbohydrate
-                    self.eatTimeIndex = editFood.eatTimeIndex
-                    self.favorite = editFood.favorite
-                    self.eatDate = editFood.eatDate
+            .navigationBarTitle(editFood == nil ? "新增餐點" : "編輯餐點")
+            .navigationBarItems(trailing: Button("Save"){
+                let meal = Food(name: self.name, eatDate: self.eatDate, eatTimeIndex: self.eatTimeIndex, protein: self.protein, fat: self.fat, carbohydrate: self.carbohydrate, favorite: self.favorite)
+                if let editFood = self.editFood {
+                    let index = self.mealsData.meals.firstIndex {
+                        $0.id == editFood.id
+                        }!
+                    self.mealsData.meals[index] = meal
                 }
+                else{
+                    self.mealsData.meals.insert(meal, at: 0)
+                }
+                self.presentationMode.wrappedValue.dismiss()
+            })
+                .onAppear{
+                    if let editFood = self.editFood{
+                        self.name = editFood.name
+                        self.protein = editFood.protein
+                        self.fat = editFood.fat
+                        self.carbohydrate = editFood.carbohydrate
+                        self.eatTimeIndex = editFood.eatTimeIndex
+                        self.favorite = editFood.favorite
+                        self.eatDate = editFood.eatDate
+                    }
+            }
         }
     }
 }
@@ -137,7 +140,7 @@ struct Nutrition: View {
             }
             else{
                 TextField(nutritionName, value: $carbohydrate ,formatter: DoubleFormatter())
-                     .padding()
+                    .padding()
             }
             Text("克")
         }

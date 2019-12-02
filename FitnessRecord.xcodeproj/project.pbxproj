@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1A7B432395424200FF6C50 /* Adjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A7B422395424200FF6C50 /* Adjustment.swift */; };
 		BF71C7762392539E00E27D91 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71C7752392539E00E27D91 /* FoodRow.swift */; };
 		BF71C7782392624200E27D91 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71C7772392624200E27D91 /* FoodList.swift */; };
 		BFAE1937239280B8009FA445 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE1936239280B8009FA445 /* PieChart.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF1A7B422395424200FF6C50 /* Adjustment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjustment.swift; sourceTree = "<group>"; };
 		BF71C7752392539E00E27D91 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
 		BF71C7772392624200E27D91 /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
 		BFAE1936239280B8009FA445 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				BFC9EE3F23920D360076AE2C /* FoodEdit.swift */,
 				BFC9EE4323920E1D0076AE2C /* FoodData.swift */,
 				BFC9EE3D23920B0D0076AE2C /* Food.swift */,
+				BF1A7B422395424200FF6C50 /* Adjustment.swift */,
 				BFE55416238E55700004BA58 /* Assets.xcassets */,
 				BFE5541B238E55700004BA58 /* LaunchScreen.storyboard */,
 				BFE5541E238E55700004BA58 /* Info.plist */,
@@ -189,6 +192,7 @@
 				BFC9EE3E23920B0D0076AE2C /* Food.swift in Sources */,
 				BFC9EE4423920E1D0076AE2C /* FoodData.swift in Sources */,
 				BF71C7762392539E00E27D91 /* FoodRow.swift in Sources */,
+				BF1A7B432395424200FF6C50 /* Adjustment.swift in Sources */,
 				BFAE193923928101009FA445 /* PieChartView.swift in Sources */,
 				BF71C7782392624200E27D91 /* FoodList.swift in Sources */,
 				BFE55413238E556F0004BA58 /* SceneDelegate.swift in Sources */,
